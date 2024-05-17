@@ -1,0 +1,27 @@
+# Ignore node_modules directory
+node_modules/
+
+
+
+# Ignore macOS .DS_Store files
+.DS_Store
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore JetBrains IDE settings
+.idea/
+
+# Ignore log files
+*.log
+
+# Ignore coverage reports
+coverage/
+
+# Ignore build output
+dist/
+build/
+
+# Ignore linting or formatting cache files
+.eslintcache
+.prettierignore

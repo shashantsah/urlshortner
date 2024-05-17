@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px; /* Added to limit width */
+            width: 100%; /* Added to make the container responsive */
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px; /* Adjusted margin for consistency */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: white; /* Changed background color */
+        }
+        button,
+        .signup-link a { /* Added .signup-link a selector to match anchor tags */
+            width: calc(100% - 24px); /* Adjusted width */
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px; /* Adjusted margin for consistency */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            display: inline-block; /* Added to align buttons horizontally */
+            vertical-align: middle; /* Added for vertical alignment */
+            text-decoration: none; /* Added for anchor tags */
+            color: white; /* Added for anchor tags */
+            background-color: #4CAF50; /* Added for anchor tags */
+            cursor: pointer; /* Added for anchor tags */
+        }
+        button:hover,
+        .signup-link a:hover { /* Added .signup-link a:hover selector */
+            background-color: #45a049; /* Adjusted color for hover state */
+        }
+        .signup-link { /* Adjusted margin for consistency */
+            margin-top: 20px;
+            margin-bottom: 0; /* Removed margin-bottom */
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome back! Please Log In</h1>
+        <% if (prompt) { %>
+            <p><%= prompt %></p>
+        <% } %>
+         
+        <form action="/user/login" method="post">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <p><a href="/reset" class="signup-link">Forgot Password?</a></p>
+            <button type="submit">Login</button>
+            <!-- Styled signup button -->
+            <p class="signup-link">Don't have an account yet? <a href="/signup">Sign Up</a></p>
+        </form>
+    </div>
+</body>
+</html>

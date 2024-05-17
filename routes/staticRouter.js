@@ -9,8 +9,8 @@ router.get("/",authenticateUser,async(req,res)=>{
     const allUrls= await URL.find({createdBy:req.user});
     res.render('home',{authenticated:true,urls:allUrls});
 });
-router.post("/",authenticateUser,handleGenerateNewShortUrl);
-router.get("/:shortID",handleRedirecting);
+
+
 
 router.get("/analytics",authenticateUser,(req,res)=>{
     res.render('analytics',{authenticated:true});

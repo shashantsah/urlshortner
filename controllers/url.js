@@ -52,6 +52,7 @@ async function handleRedirecting(req,res){
             },
             }
         );
+        console.log(entry);
             res.redirect(entry.redirectURL);
     }catch(err){
         res.json({
@@ -65,5 +66,5 @@ async function handleRedirecting(req,res){
 module.exports={
     handleGenerateNewShortUrl,
     handleGetAnalytics,
-    handleRedirecting
+     handleRedirecting
 }

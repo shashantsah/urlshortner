@@ -52,7 +52,7 @@ async function handleRedirecting(req,res){
             },
             }
         );
-        console.log(entry);
+        // console.log(entry);
             res.redirect(entry.redirectURL);
     }catch(err){
         res.json({

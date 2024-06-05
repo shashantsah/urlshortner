@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 const express=require("express");
-
 const app=express();
 const { connectMongoDb } = require("./connection");
 const staticRoutes = require("./routes/staticRouter");
